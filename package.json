@@ -1,0 +1,19 @@
+{
+  "name": "meek-sql",
+  "version": "0.1.0",
+  "description": "A meek approach to NoSQL by using a SQL backend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*"
+  },
+  "keywords": [
+    "mysql",
+    "sql",
+    "json"
+  ],
+  "author": "Allain Lalonde <allain.lalonde@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "tape": "^4.6.0"
+  }
+}

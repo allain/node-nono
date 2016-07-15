@@ -4,11 +4,9 @@ A NoSQL approach to storing data in a boring old SQL backend.
 
 I'm writing this to answer this question:
 
-What would it feel like to use a SQL database as the backend for a frontend that feels a lot like a NoSQL one.
+How practical is using a SQL databse as the backend to a NoSQL API.
 
-The goal is eventually put an API infront of a legacy MySQL database.
-
-The schema can be made to update itself based on how it's being used. For example refering to a column that doesn't exist can create it in some cases.
+The schema can be made to update itself based on how it's being used. For example referring to a column that doesn't exist can create it in some cases.
 
 ## Dreamcode
 
@@ -29,7 +27,11 @@ nono.fetch({
     }
 })
 
-nano.store({events: [
+
+// Maybe a JSONish, query language
+nono.fetch('{pages: {id,title,status>0}, places: {id,title,events:{id,title,start}}')
+
+nono.store({events: [
     // An UPDATE because id is given
     {
       id: 1,

@@ -39,7 +39,7 @@ test('query with relation works', (t) => {
 
 	t.deepEquals(sqlStruct, {
 		'events': 'SELECT `id`,`start`,`status`,`placeId` FROM `events`',
-		'events_place': 'SELECT `id`,`status` FROM `places` WHERE `id`'
+		'events_place': 'SELECT `id`,`status` FROM `events_place`'
 		//'events_place': 'SELECT `id`,`status` FROM `places` WHERE `id` IN (SELECT `id`,`start`,`status`,`placeId` FROM `events`)'
 	})
 
